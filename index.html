@@ -1,0 +1,40 @@
+<style>
+div {
+    position:relative;
+    cursor:pointer;
+    width:700px;
+}
+div:before {
+    content:'';
+    position:absolute;
+    top:39%;
+    left:44%;
+    height:60px;
+    width:85px;
+    border-radius:10px;
+    border:1px solid #000;
+    text-align:center;
+    line-height:30px;
+    background:#3AA8FF;
+    transition:all 200ms ease-in;
+}
+div:after {
+    content:'';
+    position:absolute;
+    top:44.5%;
+    left:49%;
+    display:inline-block;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-left: 12px solid #fff;
+    border-bottom: 6px solid transparent;
+}
+div:hover:before {
+    background:orange;
+}
+</style>
+<div onclick="document.getElementById('text').innerText = parseInt(document.getElementById('text').innerText) + 1">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aqz-KE-bpKQ?wmode=opaque" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<p>You clicked <span id="text">0</span> times</p>
